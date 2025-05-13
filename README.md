@@ -48,3 +48,13 @@ A simple and beginner-friendly **C++ Supermarket System** that simulates basic s
 
 ## 📌 Author
 - This project was developed for educational purposes and to practice file handling and text-based UI in C++.
+
+
+# 👨💻 Author
+
+**Ahmed Jehad Ahmed**  
+
+
+🔗 [GitHub Profile](https://github.com/7mee3d)
+
+📧 [Email Contact](mailto:enginnerahemdjehad2004@gmail.com)
