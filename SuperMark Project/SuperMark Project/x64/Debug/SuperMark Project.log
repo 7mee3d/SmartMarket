@@ -1,0 +1,5 @@
+﻿  SuperMark Project.cpp
+I:\Programming part 2\- Programming with Dr. Mohammed Abu-Hadhoud\07 - Algorithms & Problem Solving Level 3\Projects\SuperMark Project\SuperMark Project\SuperMark Project.cpp(315,42): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+I:\Programming part 2\- Programming with Dr. Mohammed Abu-Hadhoud\07 - Algorithms & Problem Solving Level 3\Projects\SuperMark Project\SuperMark Project\SuperMark Project.cpp(465,31): warning C4267: 'initializing': conversion from 'size_t' to 'long', possible loss of data
+I:\Programming part 2\- Programming with Dr. Mohammed Abu-Hadhoud\07 - Algorithms & Problem Solving Level 3\Projects\SuperMark Project\SuperMark Project\SuperMark Project.cpp(525,59): warning C4267: 'argument': conversion from 'size_t' to 'unsigned long', possible loss of data
+  SuperMark Project.vcxproj -> I:\Programming part 2\- Programming with Dr. Mohammed Abu-Hadhoud\07 - Algorithms & Problem Solving Level 3\Projects\SuperMark Project\x64\Debug\SuperMark Project.exe
