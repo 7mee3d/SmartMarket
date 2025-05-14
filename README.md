@@ -5,26 +5,42 @@ A simple and beginner-friendly **C++ Supermarket System** that simulates basic s
 
 ---
 
-## 🧾 Main Features
+# ✨ Key Features
 
-### 👤 User Section:
-- View all available products.
-- Purchase a product by entering its ID.
-- Display invoice (shows purchased products with total cost).
-- Clear current order.
+### 🛍️ **User Interface**:
 
-### 👨‍💼 Manager Section:
-- *(To be developed or can be added based on requirements.)*
+- **🔍 Browse available products**
+- **🛒 Add products to cart**
+- **💳 Complete purchases**
+- **📄 View & print invoices**
+- **🗑️ Clear shopping cart**
+
+### 👔 **Manager Dashboard**:
+
+- **➕ Add new products**
+- **✏️ Edit existing products**
+- **❌ Delete discontinued products**
+- **👁️ Preview customer view**
+- **👥 Manage user accounts**
+- **🔐 Secure admin authentication**
+- **📦 Inventory management**
+
+
+### ⚙️ **System Features**:
+
+- 🔄 Auto-save functionality
+- 📂 Data backup system
+- 🖨️ Receipt printing
 
 ---
 
-## 💾 File Usage
+# 💾 File Usage
 - **Prodects.txt**: Stores product details (ID, name, price).
 - **Reciept.txt**: Stores the receipt of the user's purchase.
 
 ---
 
-## 📋 Internal Structure
+# 📋 Internal Structure
 - Uses `struct` to manage product data.
 - Organized screens using custom header/footer display functions.
 - `enum` used for menu option selection.
@@ -32,14 +48,14 @@ A simple and beginner-friendly **C++ Supermarket System** that simulates basic s
 
 ---
 
-## ✅ How to Run
+# ✅ How to Run
 1. Compile the project using any C++ compiler (g++, Visual Studio, etc.).
 2. Make sure `Prodects.txt` exists in the project directory.
 3. Run the executable and follow the on-screen instructions.
 
 ---
 
-## ✨ Notes
+# ✨ Notes
 - Special attention was given to screen formatting for better user experience.
 - All interface sections are modular and cleanly separated.
 - Best run on Windows environments due to usage of `system("cls")`.
