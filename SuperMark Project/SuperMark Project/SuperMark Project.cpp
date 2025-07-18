@@ -1,11 +1,14 @@
 // SuperMark Project.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
+#pragma warning ( disable : 4996 ) 
 #include <iostream>
 #include <vector>
 #include <string>
 #include <fstream>
 #include <iomanip>
+#include <time.h>
+
 
 // Preproccessor Directive 
 
@@ -699,6 +702,16 @@ double calcTotalCostRecept(vector<stInformationProdects> & InformationRecieptPro
 
 //Print Reciept in the File 
 
+string getSystemDate() {
+
+    time_t timee = time(NULL);
+
+    tm* timeLocal = localtime(&timee); 
+
+    string time = to_string(timeLocal->tm_mday) + "/" + to_string(timeLocal->tm_mon + kONE) + to_string(timeLocal->tm_year + 1900); 
+
+    return time; 
+}
 void loadLineToFileReciept(string const kFILE_NAME , vector<stInformationProdects>&  kINFORMATION_PRODECT) {
 
     fstream file; 
@@ -707,15 +720,18 @@ void loadLineToFileReciept(string const kFILE_NAME , vector<stInformationProdect
     if (file.is_open()) {
 
         string line{ "" }; 
-        file << FunctionCreateNewLine(::kNUMBER_LINE) << "-------------------------------------" << FunctionCreateNewLine(::kNUMBER_LINE);
-        file << "        Reciept : " << FunctionCreateNewLine(::kNUMBER_LINE + ::kONE ); 
+        file << FunctionCreateNewLine(::kNUMBER_LINE) << "-------------------------------------" << FunctionCreateNewLine(::kNUMBER_LINE + ::kONE);
+        file << "           Reciept  " << FunctionCreateNewLine(::kNUMBER_LINE + ::kONE  ); 
+        file << "      Date Reciept :  " << getSystemDate() <<  FunctionCreateNewLine(::kNUMBER_LINE  );
+        file << FunctionCreateNewLine(::kNUMBER_LINE ) << "-------------------------------------" << FunctionCreateNewLine(::kNUMBER_LINE + ::kNUMBER_LINE);
+
         for (stInformationProdects const& kInfo : kINFORMATION_PRODECT) {
 
             line = convertRecordToLine_Reciept(kInfo ,",||,"  );
 
-            file << line << endl;
+            file << line << FunctionCreateNewLine(::kNUMBER_LINE ) ;
         }
-        file << "Total Cost of Reciept = " << calcTotalCostRecept(kINFORMATION_PRODECT) << FunctionCreateNewLine(::kNUMBER_LINE );
+        file << FunctionCreateNewLine(::kNUMBER_LINE) <<  "Total Cost of Reciept = " << calcTotalCostRecept(kINFORMATION_PRODECT) << FunctionCreateNewLine(::kNUMBER_LINE );
         file << FunctionCreateNewLine(::kNUMBER_LINE) << "-------------------------------------" << FunctionCreateNewLine(::kNUMBER_LINE + ::kONE);
       
        
